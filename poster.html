@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World Daily — Page One</title>
+<style>
+  /* ---------- reset + canvas ---------- */
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1024px;height:1024px;overflow:hidden}
+  body{
+    background:#f3eee3;
+    color:#17130e;
+    font-family:Georgia,'Times New Roman',serif;
+    padding:26px 34px 20px 34px;
+    display:flex;flex-direction:column;
+  }
+
+  /* ---------- nameplate ---------- */
+  .nameplate{text-align:center;padding-bottom:8px;border-bottom:3px solid #17130e}
+  .nameplate h1{font-size:64px;font-weight:700;line-height:1;letter-spacing:10px;text-transform:uppercase}
+
+  /* ---------- thin rule under the name ---------- */
+  .stripe{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:5px 2px;border-bottom:1px solid #17130e;
+    font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  }
+  .stripe .stamp{color:#b31b1b;font-weight:700}
+
+  /* ---------- splash: headline left, dot map right ---------- */
+  .banner{
+    display:grid;grid-template-columns:1fr 250px;gap:18px;
+    padding:12px 0 10px 0;border-bottom:1px solid #17130e;
+  }
+  .section-label{
+    font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;
+    color:#b31b1b;letter-spacing:2px;text-transform:uppercase;
+  }
+  .banner h2{font-size:30px;line-height:1.12;margin:4px 0 6px 0}
+  .banner p{font-size:13.5px;line-height:1.42;color:#17130e}
+  .credits{
+    margin-top:6px;color:#555;
+    font-family:Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  }
+
+  .chart{
+    display:flex;flex-direction:column;
+    padding-left:14px;border-left:1px solid #17130e;
+  }
+  .chart-head{
+    margin-bottom:4px;color:#b31b1b;
+    font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;
+    letter-spacing:2px;text-transform:uppercase;
+  }
+  .chart svg{width:236px;height:150px}
+  .note{
+    margin-top:4px;color:#444;
+    font-size:9.5px;line-height:1.3;font-style:italic;
+  }
+
+  /* ---------- three-column body ---------- */
+  .columns{
+    flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 16px;
+    padding-top:8px;
+  }
+  .rank{display:flex;flex-direction:column}
+
+  .brief{flex:1 1 0;display:flex;flex-direction:column;justify-content:flex-start;padding:5px 0 5px 0;border-bottom:1px solid #b9b2a2}
+  .brief:last-child{border-bottom:none}
+  .brief .section-label{font-size:9px;letter-spacing:1.6px}
+  .brief h3{font-size:14.5px;line-height:1.18;margin:2px 0}
+  .brief p{color:#333;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;line-height:1.3}
+
+  /* ---------- footer slug ---------- */
+  .colophon{
+    display:flex;justify-content:space-between;
+    margin-top:6px;padding-top:4px;border-top:3px solid #17130e;
+    font-family:Helvetica,Arial,sans-serif;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="nameplate"><h1>The World Daily</h1></div>
+
+<div class="stripe">
+  <span>Thursday</span>
+  <span class="stamp">19 November 2026</span>
+  <span>World Edition</span>
+</div>
+
+<div class="banner">
+  <div>
+    <div class="section-label">Diplomacy</div>
+    <h2>Three nuclear powers stage a peace pageant in Shenzhen</h2>
+    <p>Trump, Xi and Putin held their first three-way meeting at the APEC summit, issuing a joint declaration that calls for UN reform and declares nuclear war "cannot be won" — while saying nothing about ending the wars in Ukraine or Iran. Trump called it historic; allies read the silences. Europe's leaders, briefed afterwards in Berlin, demanded a seat at the table.</p>
+    <div class="credits">From Shenzhen, The Hague, Berlin and Washington</div>
+  </div>
+
+  <div class="chart">
+    <div class="chart-head">The world today</div>
+    <svg viewBox="0 0 236 150" xmlns="http://www.w3.org/2000/svg" fill="#17130e"><g>
+      <!-- ink dots, north america -->
+      <circle cx="22" cy="30" r="2"/><circle cx="30" cy="26" r="2"/><circle cx="38" cy="24" r="2"/><circle cx="46" cy="26" r="2"/><circle cx="54" cy="24" r="2"/><circle cx="62" cy="26" r="2"/><circle cx="70" cy="28" r="2"/>
+      <circle cx="24" cy="38" r="2"/><circle cx="32" cy="36" r="2"/><circle cx="40" cy="34" r="2"/><circle cx="48" cy="36" r="2"/><circle cx="56" cy="34" r="2"/><circle cx="64" cy="36" r="2"/><circle cx="72" cy="38" r="2"/>
+      <circle cx="26" cy="46" r="2"/><circle cx="34" cy="44" r="2"/><circle cx="42" cy="44" r="2"/><circle cx="50" cy="46" r="2"/><circle cx="58" cy="46" r="2"/>
+      <circle cx="28" cy="54" r="2"/><circle cx="36" cy="54" r="2"/><circle cx="44" cy="54" r="2"/><circle cx="52" cy="56" r="2"/><circle cx="60" cy="56" r="2"/>
+      <circle cx="66" cy="60" r="2"/><circle cx="74" cy="62" r="2"/><circle cx="82" cy="66" r="2"/><circle cx="90" cy="70" r="2"/><circle cx="96" cy="76" r="2"/><circle cx="100" cy="82" r="2"/>
+      <!-- south america -->
+      <circle cx="60" cy="84" r="2"/><circle cx="68" cy="84" r="2"/><circle cx="76" cy="84" r="2"/>
+      <circle cx="64" cy="92" r="2"/><circle cx="72" cy="92" r="2"/>
+      <circle cx="66" cy="100" r="2"/><circle cx="74" cy="100" r="2"/>
+      <circle cx="68" cy="108" r="2"/><circle cx="76" cy="108" r="2"/>
+      <circle cx="70" cy="116" r="2"/><circle cx="78" cy="116" r="2"/>
+      <circle cx="72" cy="124" r="2"/>
+      <!-- europe -->
+      <circle cx="104" cy="26" r="2"/><circle cx="112" cy="24" r="2"/><circle cx="120" cy="24" r="2"/><circle cx="128" cy="26" r="2"/>
+      <circle cx="108" cy="34" r="2"/><circle cx="116" cy="32" r="2"/><circle cx="124" cy="32" r="2"/><circle cx="132" cy="34" r="2"/><circle cx="140" cy="32" r="2"/>
+      <circle cx="106" cy="42" r="2"/><circle cx="114" cy="42" r="2"/><circle cx="122" cy="42" r="2"/><circle cx="130" cy="42" r="2"/><circle cx="138" cy="42" r="2"/>
+      <circle cx="112" cy="50" r="2"/><circle cx="120" cy="50" r="2"/><circle cx="128" cy="50" r="2"/><circle cx="136" cy="50" r="2"/>
+      <circle cx="144" cy="44" r="2"/><circle cx="146" cy="52" r="2"/><circle cx="150" cy="58" r="2"/>
+      <!-- africa -->
+      <circle cx="112" cy="66" r="2"/><circle cx="120" cy="64" r="2"/><circle cx="128" cy="64" r="2"/><circle cx="136" cy="66" r="2"/>
+      <circle cx="110" cy="74" r="2"/><circle cx="118" cy="74" r="2"/><circle cx="126" cy="74" r="2"/><circle cx="134" cy="74" r="2"/><circle cx="142" cy="74" r="2"/>
+      <circle cx="112" cy="82" r="2"/><circle cx="120" cy="82" r="2"/><circle cx="128" cy="82" r="2"/><circle cx="136" cy="82" r="2"/>
+      <circle cx="118" cy="90" r="2"/><circle cx="126" cy="90" r="2"/><circle cx="134" cy="90" r="2"/>
+      <circle cx="122" cy="98" r="2"/><circle cx="130" cy="98" r="2"/>
+      <circle cx="126" cy="106" r="2"/><circle cx="134" cy="106" r="2"/>
+      <circle cx="132" cy="114" r="2"/><circle cx="140" cy="112" r="2"/>
+      <!-- middle east -->
+      <circle cx="152" cy="66" r="2"/><circle cx="160" cy="66" r="2"/><circle cx="156" cy="74" r="2"/><circle cx="164" cy="74" r="2"/><circle cx="152" cy="82" r="2"/><circle cx="160" cy="82" r="2"/>
+      <!-- asia -->
+      <circle cx="152" cy="34" r="2"/><circle cx="160" cy="30" r="2"/><circle cx="168" cy="28" r="2"/><circle cx="176" cy="28" r="2"/><circle cx="184" cy="26" r="2"/><circle cx="192" cy="24" r="2"/><circle cx="200" cy="26" r="2"/>
+      <circle cx="156" cy="42" r="2"/><circle cx="164" cy="40" r="2"/><circle cx="172" cy="38" r="2"/><circle cx="180" cy="36" r="2"/><circle cx="188" cy="34" r="2"/><circle cx="196" cy="34" r="2"/><circle cx="204" cy="36" r="2"/>
+      <circle cx="158" cy="50" r="2"/><circle cx="166" cy="50" r="2"/><circle cx="174" cy="48" r="2"/><circle cx="182" cy="46" r="2"/><circle cx="190" cy="46" r="2"/><circle cx="198" cy="46" r="2"/><circle cx="206" cy="48" r="2"/><circle cx="212" cy="42" r="2"/>
+      <circle cx="160" cy="58" r="2"/><circle cx="168" cy="58" r="2"/><circle cx="176" cy="58" r="2"/><circle cx="184" cy="56" r="2"/><circle cx="192" cy="56" r="2"/><circle cx="200" cy="56" r="2"/><circle cx="208" cy="56" r="2"/><circle cx="214" cy="52" r="2"/><circle cx="216" cy="60" r="2"/>
+      <!-- southeast asia / indonesia -->
+      <circle cx="176" cy="76" r="2"/><circle cx="184" cy="78" r="2"/><circle cx="192" cy="80" r="2"/><circle cx="200" cy="82" r="2"/><circle cx="208" cy="84" r="2"/>
+      <circle cx="180" cy="88" r="2"/><circle cx="188" cy="90" r="2"/><circle cx="196" cy="92" r="2"/><circle cx="204" cy="94" r="2"/>
+      <!-- japan -->
+      <circle cx="214" cy="36" r="2"/><circle cx="218" cy="42" r="2"/><circle cx="220" cy="48" r="2"/><circle cx="222" cy="54" r="2"/>
+      <!-- australia -->
+      <circle cx="186" cy="112" r="2"/><circle cx="194" cy="110" r="2"/><circle cx="202" cy="110" r="2"/><circle cx="210" cy="112" r="2"/>
+      <circle cx="190" cy="120" r="2"/><circle cx="198" cy="120" r="2"/><circle cx="206" cy="120" r="2"/>
+      <circle cx="194" cy="128" r="2"/><circle cx="202" cy="128" r="2"/>
+      <!-- city pins -->
+      <circle cx="196" cy="58" r="3" fill="#b31b1b"/><circle cx="120" cy="40" r="3" fill="#b31b1b"/><circle cx="162" cy="40" r="3" fill="#b31b1b"/><circle cx="34" cy="40" r="3" fill="#b31b1b"/><circle cx="128" cy="96" r="3" fill="#b31b1b"/><circle cx="118" cy="70" r="3" fill="#b31b1b"/><circle cx="206" cy="118" r="3" fill="#b31b1b"/><circle cx="108" cy="44" r="3" fill="#b31b1b"/><circle cx="58" cy="88" r="3" fill="#b31b1b"/>
+    </g></svg>
+    <div class="note">Red dots mark the cities in today's pages: Shenzhen, The Hague, Kyiv, Washington, Khartoum, Gaza, Sydney, London and Caracas.</div>
+  </div>
+</div>
+
+<div class="columns">
+
+  <div class="rank">
+    <div class="brief"><div class="section-label">The Hague</div><h3>World court finds Myanmar guilty of genocide</h3><p>ICJ rules 9–6 over Rohingya "clearance operations"; first state genocide finding, final with no appeal.</p></div>
+    <div class="brief"><div class="section-label">Ukraine</div><h3>Russian drones hit Kyiv in broad daylight</h3><p>Hours-long raid kills one, wounds five; cathedral roof and two embassies damaged, artefacts evacuated.</p></div>
+    <div class="brief"><div class="section-label">Ukraine</div><h3>Kyiv strikes the Kerch bridge again</h3><p>Defence ministry confirms 16+ hits near the arch; all rail traffic halted. Putin vows "far more painful" reply.</p></div>
+    <div class="brief"><div class="section-label">Gaza</div><h3>Tanks cross Gaza's Yellow Line, then pull back</h3><p>Israeli armour briefly pushed past the partition in the central strip; fragile truce holds by evening.</p></div>
+    <div class="brief"><div class="section-label">Middle East</div><h3>Houthi missile scars Riyadh's tallest tower</h3><p>Drone debris hits the Kingdom Centre; air defences intercept most of the overnight salvo, no deaths reported.</p></div>
+    <div class="brief"><div class="section-label">Sudan</div><h3>Two armies claim the same Sudanese town</h3><p>Rival RSF and army statements contradict over el-Fasher's stadium district; witnesses report shelling.</p></div>
+    <div class="brief"><div class="section-label">Mediterranean</div><h3>Migrant boat capsizes with 100 aboard</h3><p>Coastguard rescue under way off Libya; 41 pulled from the water as night falls on the search zone.</p></div>
+    <div class="brief"><div class="section-label">Nigeria</div><h3>Nigeria edges towards state police forces</h3><p>All 36 state legislatures back the amendment; Tinubu's assent and further bills still required.</p></div>
+  </div>
+
+  <div class="rank">
+    <div class="brief"><div class="section-label">Washington</div><h3>A shutdown deadline, three weeks away</h3><p>Funding lapse would start 12 December; Senate Democrats split on Iran-war spending amendment.</p></div>
+    <div class="brief"><div class="section-label">Japan</div><h3>Tokyo gets the cold shoulder in Shenzhen</h3><p>Takaichi seated back-row at the leaders' photo; rare-earth curbs on Japanese industry set to persist.</p></div>
+    <div class="brief"><div class="section-label">Markets</div><h3>Anthropic raises $81.3bn in the largest IPO</h3><p>Shares of the AI lab close 68% up on debut, the biggest listing in exchange history.</p></div>
+    <div class="brief"><div class="section-label">Australia</div><h3>Australian unemployment climbs to 4.9%</h3><p>October figure beats forecasts on full-time losses; dollar slips to a three-month low.</p></div>
+    <div class="brief"><div class="section-label">Britain</div><h3>UK inflation edges up to 3.6%</h3><p>CPI rise still below the 3.7% forecast on eve of the second UK–EU summit in Brussels.</p></div>
+    <div class="brief"><div class="section-label">Latin America</div><h3>Latin America's currencies take a beating</h3><p>Real, peso and sol all slide as the dollar surges on the Shenzhen statement's energy clauses.</p></div>
+    <div class="brief"><div class="section-label">Climate</div><h3>Fossil fuels vanish from the COP31 draft</h3><p>Negotiators delete the phase-out language overnight; vulnerable bloc threatens to walk.</p></div>
+    <div class="brief"><div class="section-label">Florida</div><h3>El Niño rains put South Florida under water</h3><p>Miami Beach records its wettest November day; two rivers over flood stage, evacuations ordered.</p></div>
+  </div>
+
+  <div class="rank">
+    <div class="brief"><div class="section-label">Science</div><h3>Voyager 1 is now one light-day from home</h3><p>The 49-year-old probe crosses 24.6 billion km; its signal takes 24 hours to reach Madrid's dishes.</p></div>
+    <div class="brief"><div class="section-label">Culture</div><h3>A book prize winner who could not be there</h3><p>The National Book Award goes to a novel whose author, jailed abroad, sent a one-line speech.</p></div>
+    <div class="brief"><div class="section-label">Gaming</div><h3>Vice City breaks every entertainment record</h3><p>GTA VI sells 38 million copies in 72 hours; cinemas move showtimes to dodge launch week.</p></div>
+    <div class="brief"><div class="section-label">Technology</div><h3>PlayStation goes dark before the big launch</h3><p>A worldwide network outage hours before the GTA VI debut angers players; Sony blames DNS.</p></div>
+    <div class="brief"><div class="section-label">Health</div><h3>Kenya closes in on an Ebola all-clear</h3><p>No new cases for 28 days; two suspected contacts test negative as surveillance winds down.</p></div>
+    <div class="brief"><div class="section-label">Sport</div><h3>Nicholls hundred rescues New Zealand</h3><p>113 not out steers the Black Caps to a four-wicket win and a 1–0 series lead in Wellington.</p></div>
+    <div class="brief"><div class="section-label">Spain</div><h3>Madrid heads for a November showdown</h3><p>Sánchez–Feijóo debate draws 9 million viewers ten days before the 29 November general election.</p></div>
+    <div class="brief"><div class="section-label">Berlin</div><h3>Europe's allies demand a seat at the table</h3><p>"Coalition of the Willing" pushes binding Ukraine guarantees after being briefed on Shenzhen.</p></div>
+  </div>
+
+</div>
+
+<div class="colophon">
+  <span>The World Daily · Page One</span>
+  <span>Price: one minute of your morning</span>
+</div>
+
+</body>
+</html>
